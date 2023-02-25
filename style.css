@@ -1,14 +1,33 @@
 .flex{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+body{
+    background-color: rgb(41, 43, 43);
+}
+
+header{
+    background-color: rgb(206, 206, 206);
+    /* rgb(177, 219, 177); */
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 4px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 #case{
     background-color: grey;
-    padding: 40px;
+    padding: 40px 40px 25px 40px;
     border: 2px solid black;
     border-radius: 40px;
+    margin-top: 5px;
+    max-width: fit-content;
+    box-shadow: 10px 10px 10px black;
 }
 
 #screen{
@@ -19,7 +38,7 @@
     padding: 23px;
     font-family: 'Orbitron', sans-serif;
     border-radius: 5px;
-    /* font-size: 3rem; */
+    box-shadow: 1px 1px 10px black inset;
 }
 
 .container input{
@@ -30,10 +49,9 @@
 
 .container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 50px);
     grid-gap: 0.5rem;
-    /* max-width: 340px; */
 }
 
 .items{
@@ -49,12 +67,25 @@
     margin-bottom: 1rem;
 }
 
+.items:last-child{
+    grid-column-start: -1;
+    grid-column-end: 1;
+    margin-bottom: 1rem;
+
+}
+
 .button{
     padding: 23px;
     color: whitesmoke;
     font-family: 'Tilt Neon', cursive;
+    font-size: 0.99rem;
     cursor: pointer;
     border-radius: 6px;
+    max-height: 50px;
+    box-shadow: 2px 2px 5px rgb(37, 37, 37);
+}
+.button:hover{
+    box-shadow: none;
 }
 
 .num{
@@ -68,7 +99,7 @@
     background-color: rgb(35, 36, 49);
 }
 .operator:hover{
-    background-color: rgb(58, 60, 82);
+    background-color: rgb(21, 23, 31);
 }
 
 .function{
